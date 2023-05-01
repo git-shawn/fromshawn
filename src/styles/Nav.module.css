@@ -1,0 +1,112 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 1em 2em;
+}
+
+.nav-logo {
+    font-family: var(--syne-font);
+    font-weight: 700;
+}
+
+.nav-logo::before {
+    content: "*";
+    font-weight: 900;
+    font-size: 1.1em;
+    padding-right: 0.2em;
+    vertical-align: sub;
+    color: var(--color-secondary);
+}
+
+.nav-list-item.hamburger {
+    color: var(--color-secondary);
+    width: 2em;
+    height: 2em;
+    opacity: 1;
+    display: none;
+}
+
+.nav-list-item {
+    color: var(--color-foreground);
+    opacity: 0.5;
+    margin-left: 3em;
+    text-underline-offset: 6px;
+    -webkit-text-decoration: wavy underline;
+    text-decoration: wavy underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0px;
+    text-decoration-color: transparent;
+    line-height: 200%;
+    transition: all 0.5s;
+}
+
+.nav-list-item:hover {
+    cursor: pointer;
+}
+
+.nav-list-item.active {
+    opacity: 1;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--color-secondary);
+}
+
+@media screen and (max-width: 750px) {
+    .nav {
+        display: block;
+    }
+
+    .nav-list {
+        display: block;
+        opacity: 0;
+        max-height: 0;
+        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.25s linear;
+    }
+
+    .nav-list.sidebar {
+        height: auto;
+        opacity: 1;
+        max-height: 1000px;
+        transition: max-height 1s ease-in-out;
+    }
+
+    .nav-list-item {
+        font-size: 16pt;
+        display: block;
+        margin-top: 0.5em;
+        margin-left: 1em;
+    }
+
+    .nav-list-item.hamburger {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1em;
+        float: right;
+        animation: rotate 0.25s;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(90deg);
+        }
+
+        to {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes slidein {
+        from {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+}

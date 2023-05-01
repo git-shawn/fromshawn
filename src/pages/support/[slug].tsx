@@ -1,0 +1,50 @@
+import fs from "fs"
+import { GetStaticPropsContext, InferGetStaticPropsType } from "next"
+import { serialize } from "next-mdx-remote/serialize"
+import { MDXRemote } from "next-mdx-remote"
+import Head from "next/head"
+import React from "react"
+import MDXPillButton from "@/components/docs/pill-button"
+import MDXDisclaimerText from "@/components/docs/disclaimer-text"
+import styles from '@/styles/Docs.module.css'
+
+export default function SupportDocsPage({ source }: InferGetStaticPropsType<typeof getStaticProps>) {
+  return (
+    <div>
+      <Head>
+        <title>{source.frontmatter.title as string}</title>
+      </Head>
+      <div
+        className={`${styles["main"]} ${styles["prominent-title"]}`}>
+        <MDXRemote
+          {...source}
+          components={{
+            MDXPillButton,
+            MDXDisclaimerText
+          }}
+        />
+      </div>
+    </div>
+  )
+}
+export async function getStaticPaths() {
+  return { paths: [], fallback: "blocking" }
+}
+
+export async function getStaticProps(
+  ctx: GetStaticPropsContext<{
+    slug: string
+  }>,
+) {
+  const { slug } = ctx.params!
+
+  const postFile = fs.readFileSync(`src/_docs/${slug}.mdx`)
+
+  const mdxSource = await serialize(postFile, { parseFrontmatter: true })
+  return {
+    props: {
+      source: mdxSource,
+    },
+    revalidate: 60,
+  }
+}

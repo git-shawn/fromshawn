@@ -1,113 +1,252 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import { useState } from "react";
+import Link from "next/link";
+import Head from "next/head";
+import Image, { StaticImageData } from "next/image";
+import { motion, Variants } from "framer-motion";
+import Lightbox from "@/components/shared/lightbox";
+import FooterBox from "@/components/shared/contact-footer";
+import TextLoop from "@/components/shared/text-loop";
 
-const inter = Inter({ subsets: ['latin'] })
+// Style
+import grid from '@/styles/GridLayout.module.css'
+import { FaTimes } from 'react-icons/fa';
+
+// Images
+import selfImage from 'public/AmeriCorpsVISTAPhoto.png'
+import gradientBackgroundImage from 'public/gradientOverlay.webp'
+import qrpopImage from 'public/qrpopPhone.png'
+import rerouterImage from 'public/rerouterPhone.png'
+import codyDierufImage from 'public/cdfPlate.png'
+import adlabImage from 'public/adlabApp.png'
 
 export default function Home() {
+
+  const squircleVariants: Variants = {
+    offscreen: {
+      opacity: 0,
+      y: 50,
+    },
+    onscreen: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 1
+      }
+    }
+  }
+
+  interface ICard {
+    id: number;
+    title: string;
+    body: string;
+    image: StaticImageData;
+    backgroundColor: string;
+    flippedTitle: string;
+    flippedBody: string;
+    flippedURL: string;
+  }
+
+  const cards: ICard[] = [
+    {
+      id: 1,
+      title: "QR Pop",
+      body: "A clean, convenient, and privacy-first QR code generator for macOS, iOS, and watchOS.",
+      image: qrpopImage,
+      backgroundColor: "#FF7033",
+      flippedTitle: "QR codes right where you need them (everywhere)",
+      flippedBody: "QR Pop was built with both privacy and simplicity in mind. Not only can you design a beautiful, custom QR code but you can do it in nearly every app on your device. QR Pop's system extensions that bring code generation to the Share Sheet, Siri, Shortcuts, Safari, and more.",
+      flippedURL: "/qrpop"
+    },
+    {
+      id: 2,
+      title: "Rerouter",
+      body: "A seamless Safari Extension that automatically opens Google Maps URLs in Apple Maps.",
+      image: rerouterImage,
+      backgroundColor: "#3A93FF",
+      flippedTitle: "Gets you where you need to go",
+      flippedBody: "Rerouter is an unobtrusive Safari Extension made to do just one thing—open Google Map's links in Apple Maps. Setup is easy and rerouting happens privately and automatically. That means when you search for \"hikes near me\" you can actually use the directions you find.",
+      flippedURL: "/rerouter"
+    },
+    {
+      id: 3,
+      title: "The Cody Dieruf Foundation",
+      body: "Various digital and physical marketing projects for an amazing nonprofit in America's last best place.",
+      image: codyDierufImage,
+      backgroundColor: "#8E869E",
+      flippedTitle: "Breathin' is Believin'",
+      flippedBody: "The Cody Dieruf Foundation is giving hope, and financial aid, to those in Montana living with Cystic Fibrosis. As their AmeriCorps VISTA, I created effective marketing collateral that activated dozens of donors and acquired many new clients. I even made a specialty license plate!",
+      flippedURL: "/resume#cdf"
+    },
+    {
+      id: 4,
+      title: "The Saluki AdLab",
+      body: "Coding and marketing for Southern Illinois University's full-service student-led ad agency.",
+      image: adlabImage,
+      backgroundColor: "#660000",
+      flippedTitle: "Better Call SAL",
+      flippedBody: "The Saluki AdLab is Southern Illinois University's award-winning student-led full-service ad agency. As their creative director,  I helped realize projects for clients across the state of Illinois. My work included web development, app development, social media management, ad buying, and commercial production.",
+      flippedURL: "/resume#sal"
+    }
+  ]
+
+  const HoverableFlippableCard: React.FC<{ card: ICard }> = ({ card }) => {
+    const [flip, setFlip] = useState(false);
+    const [isHovering, setIsHovering] = useState<Boolean>(false);
+    const handleMouseEnter = () => setIsHovering(true);
+    const handleMouseLeave = () => setIsHovering(false);
+    return (
+      <div
+        className={`${grid["card"]} ${grid["cube-mobile"]} ${flip ? grid["flip"] : ""} ${grid["one"]}`}
+      >
+        <div
+          className={grid["card-inner"]}
+        >
+          {/* Front of Card */}
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.3 }}
+            className={`${isHovering ? grid["peak-photo"] : ""} ${grid["item"]} ${grid["card-front"]} ${grid["actionable"]} ${grid["cube-mobile"]}`}
+            variants={squircleVariants}
+            style={{
+              backgroundColor: `${card.backgroundColor}`,
+              color: 'white'
+            }}
+            onClick={() => { setFlip(true) }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div
+              className={`${grid["padded"]}`}
+            >
+              <h2 className="blackSyne">{card.title}</h2>
+              {card.body}
+            </div>
+            <Image
+              src={card.image}
+              alt=""
+              className={`${grid["lower-photo"]}`}
+            />
+          </motion.div>
+
+          {/* Back of Card */}
+          <div
+            style={{
+              backgroundColor: `${card.backgroundColor}`,
+              color: 'white'
+            }}
+            className={`${grid["card-back"]} ${grid["padded"]} ${grid["cube-mobile"]}`}
+          >
+            <div>
+              <div
+                style={{
+                  backgroundColor: `${card.backgroundColor}`
+                }}
+                className={`${grid["card-row"]} ${grid["header"]}`}>
+                <h2>{card.flippedTitle}</h2>
+                <div
+                  className={`${grid["circular-material-button"]} ${grid["small"]} ${grid["black"]} ${grid["actionable"]}`}
+                  onClick={() => { setFlip(false) }}>
+                  <FaTimes
+                    className={`${grid["circular-material-button-icon"]} ${grid["small"]}`} />
+                </div>
+              </div>
+              {card.flippedBody}
+            </div>
+            <div className={`${grid["card-row"]} ${grid["footer"]}`}>
+              <Link
+                href={card.flippedURL}
+                className={`${grid["pill-button"]} ${grid["invert"]}`}>
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  };
+
   return (
     <>
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Generated by create next app" />
+        <title>Shawn Davis</title>
+        <meta name="description" content="Just a guy who loves being outside and volunteering. I code sometimes too." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
+      <main className={`${grid["main"]}`}>
+
+        {/* First Row */}
+
+        <div className={`${grid["row"]}`}>
+
+          {/* Introduction Card */}
+
+          <div className={`${grid["item"]} ${grid["two"]} ${grid["default-background"]}`}>
+            <Image
+              src={gradientBackgroundImage}
+              alt={""}
+              priority={true}
+              placeholder={"blur"}
+              className={`${grid["cover-photo"]} ${grid["blended"]}`}
+            />
+            <div
+              style={{ zIndex: 1 }}
+              className={`${grid["spread-between"]} ${grid["padded"]}`}>
+              <h1><span className='black'>Hey, I'm Shawn.</span> I love creating
+                <TextLoop>
+                  <span>engaging</span>
+                  <span>exciting</span>
+                  <span>beautiful</span>
+                  <span>inclusive</span>
+                  <span>thoughtful</span>
+                </TextLoop>
+                digital experiences.</h1>
+              <div
+                className={`${grid["button-row"]}`}>
+                <Link
+                  href="/contact"
+                  className={`${grid["pill-button"]}`}>
+                  Let's Chat!
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Self Portrait */}
+
+          <div
+            className={`${grid["item"]} ${grid["cube-mobile"]} ${grid["one"]} ${grid["actionable"]} ${grid["clamped"]}`}>
+            <Lightbox>
               <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
+                src={selfImage}
+                alt={"A picture of me at the Montana State Capital."}
+                placeholder={"blur"}
+                className={`${grid["cover-photo"]}`}
               />
-            </a>
+            </Lightbox>
           </div>
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+        {/* Dynamic, Flippable Cards */}
+
+        <div className={`${grid["row"]}`}>
+          {/* QR Pop */}
+          <HoverableFlippableCard key={cards[0].id} card={cards[0]} />
+          {/* Rerouter */}
+          <HoverableFlippableCard key={cards[1].id} card={cards[1]} />
         </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+        <div className={`${grid["row"]}`}>
+          {/* Cody Dieruf Foundation */}
+          <HoverableFlippableCard key={cards[2].id} card={cards[2]} />
+          {/* Saluki AdLab */}
+          <HoverableFlippableCard key={cards[3].id} card={cards[3]} />
         </div>
+
+        <FooterBox />
       </main>
     </>
   )
