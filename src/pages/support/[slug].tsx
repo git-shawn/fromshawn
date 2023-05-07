@@ -1,5 +1,7 @@
 import fs from "fs"
-import path from "path"
+import { join } from 'path';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { ParsedUrlQuery } from "querystring"
 import { GetStaticPropsContext, InferGetStaticPropsType } from "next"
 import { serialize } from "next-mdx-remote/serialize"
 import { MDXRemote } from "next-mdx-remote"
@@ -32,16 +34,21 @@ export default function SupportDocsPage({ source }: InferGetStaticPropsType<type
   )
 }
 
-export const fetchPostSlugs = () => fs.promises.readdir(path.join(process.cwd(), "src/_docs"));
+const POSTS_PATH = join(process.cwd(), '/src/_docs');
+export interface ArticleProps extends ParsedUrlQuery {
+  slug: string;
+}
 
-export async function getStaticPaths() {
-  const slugs = await fetchPostSlugs();
+export const getStaticPaths: GetStaticPaths<ArticleProps> = async () => {
+  const paths = fs.readdirSync(POSTS_PATH)
+    .map((path) => path.replace(/\.mdx?$/, ''))
+    .map((slug) => ({ params: { slug } }));
 
   return {
-    paths: slugs?.map((slug) => ({ params: { slug } })),
+    paths,
     fallback: false,
   };
-}
+};
 
 export async function getStaticProps(
   ctx: GetStaticPropsContext<{
