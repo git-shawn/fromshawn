@@ -2,7 +2,7 @@
 title: QR Pop Version 3.0
 author: Shawn Davis
 description: Version 3.0 reimagines QR Pop with new design styles, more extensions, better widgets, iCloud backup support, and so much more.
-date: 05/01/2023
+date: 05/06/2023
 tag: qrpop
 previewImage: /previews/qrpopv3.png
 ---
@@ -10,8 +10,79 @@ previewImage: /previews/qrpopv3.png
 # What's New in QR Pop?
 ## Version 3.0
 
-<MDXDisclaimerText text="This article was last updated 5/01/2023" />
+<MDXDisclaimerText text="This article was last updated 5/06/2023" />
 
-Lorem Ipsum...
+Enjoy a more powerful, expressive, and exhaustive code-generating experience with QR Pop 3. This update is a complete reimagining of what QR Pop can be. Explore a wildly expanded designer, more system extensions, and new Cloud features—all without compromising your privacy. Everything is still free and [open source](https://github.com/git-shawn/QR-Pop).
+
+---
+
+### Builder
+- QR Pop's "Generator" page has been renamed to "Builder."
+- Builder now supports creating QR codes for [WhatsApp](https://www.whatsapp.com/), a trademark of Meta.
+- The *Location* builder now offer a more robust search experience.
+- The *Contact Card* builder now allows you to modify contacts imported from your address book.
+- The *Contact Card* builder now includes "Organization Name" as an adjustable field.
+- The *Wifi Network* builder now offers "None" as an option for network encryption type.
+- QR codes can now be exported as `.svg`, `.pdf`, or `.png`.
+- An improved printing experience has been brought to macOS.
+- Many builder commands have been added to the menu bar on macOS. These commands are available on iPadOS as keyboard shortcuts.
+- QR codes can be tested for "scannability" by right-clicking/long-pressing.
+
+### Design
+- The "pixels" and "eyes" of a QR code can now be designed seperately.
+- Fourteen unique pixel designs have been added.
+- Ten unique eye designs have been added.
+- The color of the outer-portion of the eye can now be modified seperately from the inner-portion (the pupil).
+- The background can now be accented with mostly-transparent columns or rows.
+- Image overlays now mask the pixels they're placed above.
+- Image overlays can now be rotated and placed in the lower-trailing corner.
+- Designs can now be saved as `Templates` for use later. Templates are automatically saved to iCloud when available.
+- Templates can be exported as `.qrpt` and shared with others.
+
+### Scanner
+- The scanner's user-interface has been redesigned to more closely match the rest of QR Pop.
+- Images can now easily be imported from either Photos or Files.
+- On iOS, the camera toggled between front-and-back.
+- On macOS, a new camera picker is available with support for [coninuity camera](https://support.apple.com/en-us/HT213244).
+- On macOS, the display itself can be scanned for QR codes via the new Menu Bar applet.
+
+### Archive
+- A brand new "Archive" has been added to QR Pop.
+- QR codes created in the builder or duplicated via the scanner can now be added to the Archive.
+- Codes saved to the Archive are automatically saved to iCloud when available.
+
+### Widgets
+- Widgets are now available for the lockscreen on iOS and generally on macOS.
+- The new Archive integrates directly with widgets, making it possible to have multiple widgets representing multiple unique codes across your device.
+- Widgets open directly to the Archvie when tapped.
+
+### Share
+- The Share extension has been redesigned on iOS and macOS with a more consistent look.
+- Contacts and images are now supported. Images are duplicated similar to the Scanner in QR Pop.
+- Codes made in Share can now be sent to QR Pop for further designing.
+- Template `.qrpt` files can be imported into QR Pop via Share.
+
+### Safari
+- An "Open in QR Pop" button has been added to QR Pop's Safari Extension.
+- Settings regarding the Safari Extension have been moved from the main application to a new "Options" page within Safari.
+
+### Apple Watch
+- QR Pop is now available for Apple Watch as a companion experience.
+- The Archive is available on Apple Watch via iCloud.
+- Archived codes can be "brightened" to improve scannability. Brightened codes are stripped of all design elements and appear as simple, black-and-white codes.
+- All codes on Apple Watch are stripped of some design elements to improve scannability on its smaller display.
+
+### Siri & Shortcuts
+- QR Pop's Builder and Archive are now available via Siri and within Apple's Shortcuts app.
+- The builder shortcut supports most design features available within QR Pop. Colors can be applied via [CSS standard hexadecimal codes](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color#syntax).
+- QR Pop's Archive is available for quick access within Spotlight search.
+
+### Miscellaneous
+- An enhanced code presentation experience is available for iOS and iPadOS. When connected to a non-interactive secondary display, including AirPlay Mirroring, a new mirroring bar will appear within the Archive and Builder.
+- Enhanced mirroring can be disabled within Settings on iOS and iPadOS.
+- On macOS, codes can be presented as ancillary windows within the Archive or within the Builder by selecting "Window > View Code in New Window" via the menu bar.
+- Handoff now transfers all information excluding image overlays.
+- Dramatic speed and reliability improvements across the board.
+- The minimum version has been raised to iOS 16.1 and macOS 13.1.
 
 <MDXPillButton title="Download QR Pop" href="https://apps.apple.com/us/app/qr-pop/id1587360435" />

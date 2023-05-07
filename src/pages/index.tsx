@@ -12,12 +12,12 @@ import grid from '@/styles/GridLayout.module.css'
 import { FaTimes } from 'react-icons/fa';
 
 // Images
-import selfImage from 'public/AmeriCorpsVISTAPhoto.png'
-import gradientBackgroundImage from 'public/gradientOverlay.webp'
-import qrpopImage from 'public/qrpopPhone.png'
-import rerouterImage from 'public/rerouterPhone.png'
-import codyDierufImage from 'public/cdfPlate.png'
-import adlabImage from 'public/adlabApp.png'
+import imageSelf from 'public/home/grid-vista.png'
+import imageGradient from 'public/shared-assets/gradient-overlay.webp'
+import imageQRPop from 'public/home/grid-qrpop.png'
+import imageRerouter from 'public/home/grid-rerouter.png'
+import imageCDF from 'public/home/grid-cdf.png'
+import imageAdLab from 'public/home/grid-adlab.png'
 
 export default function Home() {
 
@@ -53,7 +53,7 @@ export default function Home() {
       id: 1,
       title: "QR Pop",
       body: "A clean, convenient, and privacy-first QR code generator for macOS, iOS, and watchOS.",
-      image: qrpopImage,
+      image: imageQRPop,
       backgroundColor: "#FF7033",
       flippedTitle: "QR codes right where you need them (everywhere)",
       flippedBody: "QR Pop was built with both privacy and simplicity in mind. Not only can you design a beautiful, custom QR code but you can do it in nearly every app on your device. QR Pop's system extensions that bring code generation to the Share Sheet, Siri, Shortcuts, Safari, and more.",
@@ -63,7 +63,7 @@ export default function Home() {
       id: 2,
       title: "Rerouter",
       body: "A seamless Safari Extension that automatically opens Google Maps URLs in Apple Maps.",
-      image: rerouterImage,
+      image: imageRerouter,
       backgroundColor: "#3A93FF",
       flippedTitle: "Gets you where you need to go",
       flippedBody: "Rerouter is an unobtrusive Safari Extension made to do just one thing—open Google Map's links in Apple Maps. Setup is easy and rerouting happens privately and automatically. That means when you search for \"hikes near me\" you can actually use the directions you find.",
@@ -73,7 +73,7 @@ export default function Home() {
       id: 3,
       title: "The Cody Dieruf Foundation",
       body: "Various digital and physical marketing projects for an amazing nonprofit in America's last best place.",
-      image: codyDierufImage,
+      image: imageCDF,
       backgroundColor: "#8E869E",
       flippedTitle: "Breathin' is Believin'",
       flippedBody: "The Cody Dieruf Foundation is giving hope, and financial aid, to those in Montana living with Cystic Fibrosis. As their AmeriCorps VISTA, I created effective marketing collateral that activated dozens of donors and acquired many new clients. I even made a specialty license plate!",
@@ -83,7 +83,7 @@ export default function Home() {
       id: 4,
       title: "The Saluki AdLab",
       body: "Coding and marketing for Southern Illinois University's full-service student-led ad agency.",
-      image: adlabImage,
+      image: imageAdLab,
       backgroundColor: "#660000",
       flippedTitle: "Better Call SAL",
       flippedBody: "The Saluki AdLab is Southern Illinois University's award-winning student-led full-service ad agency. As their creative director,  I helped realize projects for clients across the state of Illinois. My work included web development, app development, social media management, ad buying, and commercial production.",
@@ -175,6 +175,9 @@ export default function Home() {
         <meta name="description" content="Just a guy who loves being outside and volunteering. I code sometimes too." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Shawn Davis" />
+        <meta property="og:description" content="Just a guy who loves being outside and volunteering. I code sometimes too." />
+        <meta property="og:image" content="/previews/social-box-main.png" />
       </Head>
       <main className={`${grid["main"]}`}>
 
@@ -186,7 +189,7 @@ export default function Home() {
 
           <div className={`${grid["item"]} ${grid["two"]} ${grid["default-background"]}`}>
             <Image
-              src={gradientBackgroundImage}
+              src={imageGradient}
               alt={""}
               priority={true}
               placeholder={"blur"}
@@ -218,10 +221,10 @@ export default function Home() {
           {/* Self Portrait */}
 
           <div
-            className={`${grid["item"]} ${grid["cube-mobile"]} ${grid["one"]} ${grid["actionable"]} ${grid["clamped"]}`}>
+            className={`${grid["item"]} ${grid["cube-mobile"]} ${grid["one"]} ${grid["actionable"]}`}>
             <Lightbox>
               <Image
-                src={selfImage}
+                src={imageSelf}
                 alt={"A picture of me at the Montana State Capital."}
                 placeholder={"blur"}
                 className={`${grid["cover-photo"]}`}

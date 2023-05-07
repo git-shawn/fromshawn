@@ -6,6 +6,7 @@ import fs from "fs"
 import { serialize } from "next-mdx-remote/serialize"
 import styles from '@/styles/Docs.module.css'
 import path from "path"
+import Head from "next/head";
 
 export default function Home({ postPreviews }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter()
@@ -19,45 +20,53 @@ export default function Home({ postPreviews }: InferGetStaticPropsType<typeof ge
   }, [router])
 
   return (
-    <div className={styles["main"]}>
-      <div className={styles["doc-filter-bar"]}>
-        <select
-          onChange={(e) => {
-            setFilter(e.target.value);
-          }}
-          name="doc-type"
-          id="doc-type">
-          <option value="all">All Documents</option>
-          <option value="qrpop">QR Pop</option>
-          <option value="rerouter">Rerouter</option>
-        </select>
-      </div>
+    <>
+      <Head>
+        <title>Shawn Davis — Support</title>
+        <meta name="description" content="Support documents for applications made by Shawn Davis." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className={styles["main"]}>
+        <div className={styles["doc-filter-bar"]}>
+          <select
+            onChange={(e) => {
+              setFilter(e.target.value);
+            }}
+            name="doc-type"
+            id="doc-type">
+            <option value="all">All Documents</option>
+            <option value="qrpop">QR Pop</option>
+            <option value="rerouter">Rerouter</option>
+          </select>
+        </div>
 
-      <div className={styles["doc-cards"]}>
-        {postPreviews
-          .sort((a, b) => {
-            // MM/DD/YY
-            let c = a.date.split('/').reverse();
-            let j = Number(c[2]+c[0]+c[1]);
-            let d = b.date.split('/').reverse();
-            let k = Number(d[2]+d[0]+d[1]);
-            console.log("first: " + j);
-            console.log("second: " + k);
-            return k - j;
-          })
-          .map((postPreview, i) => {
-            return (
-              (postPreview.tag == filter || filter == "all") ?
-                <div
-                  className={styles["doc-card"]}
-                  key={i}>
-                  <DocCard docPreview={postPreview} />
-                </div>
-                : null
-            )
-          })}
+        <div className={styles["doc-cards"]}>
+          {postPreviews
+            .sort((a, b) => {
+              // MM/DD/YY
+              let c = a.date.split('/').reverse();
+              let j = Number(c[2] + c[0] + c[1]);
+              let d = b.date.split('/').reverse();
+              let k = Number(d[2] + d[0] + d[1]);
+              console.log("first: " + j);
+              console.log("second: " + k);
+              return k - j;
+            })
+            .map((postPreview, i) => {
+              return (
+                (postPreview.tag == filter || filter == "all") ?
+                  <div
+                    className={styles["doc-card"]}
+                    key={i}>
+                    <DocCard docPreview={postPreview} />
+                  </div>
+                  : null
+              )
+            })}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

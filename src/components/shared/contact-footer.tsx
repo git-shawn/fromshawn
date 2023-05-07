@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import grid from '@/styles/GridLayout.module.css'
 import { FaGithub, FaStackOverflow, FaLinkedin } from 'react-icons/fa';
-import gradientBackgroundImage from 'public/gradientOverlay.webp'
+import imageGradient from 'public/shared-assets/gradient-overlay.webp'
 
 export default function FooterBox() {
     const squircleVariants: Variants = {
@@ -31,7 +31,7 @@ export default function FooterBox() {
             className={`${grid["row"]}`}>
             <div className={`${grid["item"]} ${grid["default-background"]}`}>
                 <Image
-                    src={gradientBackgroundImage}
+                    src={imageGradient}
                     alt={""}
                     priority={true}
                     className={`${grid["cover-photo"]} ${grid["blended"]}`}

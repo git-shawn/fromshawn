@@ -13,6 +13,9 @@ export default function SupportDocsPage({ source }: InferGetStaticPropsType<type
     <div>
       <Head>
         <title>{source.frontmatter.title as string}</title>
+        <meta name="description" content={source.frontmatter.description as string} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
         className={`${styles["main"]} ${styles["prominent-title"]}`}>

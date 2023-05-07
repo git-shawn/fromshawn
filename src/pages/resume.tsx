@@ -4,10 +4,10 @@ import styles from "@/styles/Resume.module.css";
 import gridStyles from "@/styles/GridLayout.module.css"
 import { BsHeart, BsCloudDownload } from "react-icons/bs";
 
-import ga4Cert from "/public/gaCert.png";
-import gadsCert from "/public/gAdsCert.png";
-import swiftUICert from "/public/100SwiftCert.png";
-import swiftUIFullCert from "/public/swiftFullCert.jpg";
+import ga4Cert from "/public/resume/cert-ga.png";
+import gaAdsCert from "/public/resume/cert-ga-ads.png";
+import swiftCert from "/public/resume/cert-swift.png";
+import swiftFullCert from "/public/resume/cert-swift-full.jpg";
 import FooterBox from "@/components/shared/contact-footer";
 
 export default function Resume() {
@@ -19,13 +19,17 @@ export default function Resume() {
                 <meta name="description" content="Just a guy who loves being outside and volunteering. I code sometimes too." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
+                <meta property="og:title" content="Shawn Davis - About Me" />
+                <meta property="og:description" content="Just a guy who loves being outside and volunteering. I code sometimes too." />
+                <meta property="og:image" content="/previews/social-box-main.png" />
             </Head>
             <div className={styles.aboutContainer}>
                 <div id="intro">
                     <div className={styles["download-row"]}>
                         <h1>Hi, I'm Shawn</h1>
                         <a
-                            href="https://www.linkedin.com/in/shawnfdavis/"
+                            href="/resume/shawn-davis-resume.pdf"
+                            download
                             className={`${gridStyles["circular-material-button"]} ${gridStyles["black"]}`}>
                             <BsCloudDownload
                                 className={gridStyles["circular-material-button-icon"]}
@@ -236,16 +240,16 @@ export default function Resume() {
                                 <Image
                                     className={`${styles.roundedImage}`}
                                     alt="Google Ads - Measurement Certification"
-                                    src={gadsCert}
+                                    src={gaAdsCert}
                                 />
                             </a>
                         </div>
                         <div className={`${styles.certItem}`}>
-                            <a href={swiftUIFullCert.src}>
+                            <a href={swiftFullCert.src}>
                                 <Image
                                     className={`${styles.roundedImage}`}
                                     alt="100 Days of Swift Certification"
-                                    src={swiftUICert}
+                                    src={swiftCert}
                                 />
                             </a>
                         </div>

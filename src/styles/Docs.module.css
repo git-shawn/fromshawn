@@ -17,15 +17,32 @@
 
 .main p {
     margin: 1rem 0;
+    line-height: 120%;
 }
 
-.main>p>a {
+.main li {
+    line-height: 140%;
+}
+
+.main h3 {
+    margin: 1rem 0;
+}
+
+.main li a,
+.main p a {
     font-weight: bold;
     color: var(--color-primary);
 }
 
-.main>p>a:hover {
+.main li a,
+.main p a:hover {
     color: var(--color-secondary);
+}
+
+.main code {
+    background-color: var(--color-secondary-background);
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
 }
 
 .disclaimer-text {

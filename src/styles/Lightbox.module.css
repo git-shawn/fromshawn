@@ -1,0 +1,18 @@
+.lightbox {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    height: 100lvh;
+    width: 100lvw;
+    background-color: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+}
+
+.lightbox img {
+    height: 75lvh;
+    width: 75lvw;
+    top: 12.5lvh;
+    left: 12.5lvw;
+    border-radius: 2rem;
+}
