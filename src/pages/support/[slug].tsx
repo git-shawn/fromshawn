@@ -1,4 +1,5 @@
 import fs from "fs"
+import path from "path"
 import { GetStaticPropsContext, InferGetStaticPropsType } from "next"
 import { serialize } from "next-mdx-remote/serialize"
 import { MDXRemote } from "next-mdx-remote"
@@ -30,8 +31,16 @@ export default function SupportDocsPage({ source }: InferGetStaticPropsType<type
     </div>
   )
 }
+
+export const fetchPostSlugs = () => fs.promises.readdir(path.join(process.cwd(), "src/_docs"));
+
 export async function getStaticPaths() {
-  return { paths: [], fallback: "blocking" }
+  const slugs = await fetchPostSlugs();
+
+  return {
+    paths: slugs?.map((slug) => ({ params: { slug } }));,
+    fallback: false,
+  };
 }
 
 export async function getStaticProps(

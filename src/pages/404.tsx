@@ -21,9 +21,10 @@ export default function FourOhFour() {
                         flexDirection: "column",
                         alignContent: "center",
                         justifyContent: "center",
+                        textAlign: "center"
                     }}
                 >
-                    <h1>?</h1>
+                    <h2>404</h2>
                 </div>
             </div>
         </>
