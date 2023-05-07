@@ -50,16 +50,19 @@ export default function FooterBox() {
                         </Link>
                         <a
                             href="https://www.github.com/git-shawn"
+                            aria-label="GitHub"
                             className={`${grid["circular-material-button"]} ${grid["black"]}`}>
                             <FaGithub className={`${grid["circular-material-button-icon"]}`} />
                         </a>
                         <a
                             href="https://stackoverflow.com/users/20422552/shawn"
+                            aria-label="StackOverflow"
                             className={`${grid["circular-material-button"]} ${grid["orange"]}`}>
                             <FaStackOverflow className={`${grid["circular-material-button-icon"]}`} />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/shawnfdavis/"
+                            aria-label="LinkedIn"
                             className={`${grid["circular-material-button"]} ${grid["blue"]}`}>
                             <FaLinkedin className={`${grid["circular-material-button-icon"]}`} />
                         </a>

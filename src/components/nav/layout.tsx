@@ -14,7 +14,7 @@ const Layout = ({ children }: PropsWithChildren) => {
             {children}
             <footer>
                 <p>© 2023 Shawn Davis. Made with <FaRegHeart/> in Carbondale, IL.</p>
-                <p>Browse this site's source code on <a href="">GitHub</a>!</p>
+                <p>Browse this site's source code on <a href="https://github.com/git-shawn/fromshawndev">GitHub</a>!</p>
             </footer>
         </>
     );

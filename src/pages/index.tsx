@@ -127,6 +127,7 @@ export default function Home() {
             <Image
               src={card.image}
               alt=""
+              sizes="25rem"
               className={`${grid["lower-photo"]}`}
             />
           </motion.div>
@@ -193,6 +194,7 @@ export default function Home() {
               alt={""}
               priority={true}
               placeholder={"blur"}
+              sizes="25rem"
               className={`${grid["cover-photo"]} ${grid["blended"]}`}
             />
             <div
@@ -227,6 +229,7 @@ export default function Home() {
                 src={imageSelf}
                 alt={"A picture of me at the Montana State Capital."}
                 placeholder={"blur"}
+                sizes="25rem"
                 className={`${grid["cover-photo"]}`}
               />
             </Lightbox>
