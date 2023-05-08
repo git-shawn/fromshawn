@@ -52,6 +52,28 @@
     font-weight: 300;
 }
 
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+}
+
+.hero-image img {
+    object-fit: contain;
+    border-radius: 4vw;
+    width: 100%;
+    height: auto;
+    box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.09);
+}
+
+.hero-image p {
+    text-align: center;
+    opacity: 0.75;
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
 /** Preview Page **/
 .doc-cards {
     display: flex;
@@ -112,11 +134,14 @@
     cursor: pointer;
 }
 
-.doc-card:hover {
-    filter: brightness(0.8);
+@media (hover: hover) {
+    .doc-card:hover {
+        filter: brightness(0.8);
+    }
 }
 
 @media (max-width: 600px) {
+
     .doc-filter-bar,
     .doc-cards {
         margin-top: 1rem;
@@ -128,6 +153,10 @@
 
     .doc-filter-bar select {
         background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    }
+
+    .hero-image img {
+        box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.5);
     }
 
     .doc-card:hover {

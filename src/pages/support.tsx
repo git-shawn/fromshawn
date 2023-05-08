@@ -23,9 +23,12 @@ export default function Home({ postPreviews }: InferGetStaticPropsType<typeof ge
     <>
       <Head>
         <title>Shawn Davis — Support</title>
-        <meta name="description" content="Support documents for applications made by Shawn Davis." />
+        <meta name="description" content="Learn everything you need to know about applications made by Shawn Davis." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/shared-assets/favicon.ico" />
+        <meta property="og:title" content="Shawn Davis - Support" />
+        <meta property="og:description" content="Learn everything you need to know about applications made by Shawn Davis." />
+        <meta property="og:image" content="/previews/social-box-support.png" />
       </Head>
       <div className={styles["main"]}>
         <div className={styles["doc-filter-bar"]}>
@@ -49,8 +52,6 @@ export default function Home({ postPreviews }: InferGetStaticPropsType<typeof ge
               let j = Number(c[2] + c[0] + c[1]);
               let d = b.date.split('/').reverse();
               let k = Number(d[2] + d[0] + d[1]);
-              console.log("first: " + j);
-              console.log("second: " + k);
               return k - j;
             })
             .map((postPreview, i) => {

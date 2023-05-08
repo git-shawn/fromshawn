@@ -1,15 +1,16 @@
-import fs from "fs"
+import fs from "fs";
 import { join } from 'path';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { ParsedUrlQuery } from "querystring"
-import { GetStaticPropsContext, InferGetStaticPropsType } from "next"
-import { serialize } from "next-mdx-remote/serialize"
-import { MDXRemote } from "next-mdx-remote"
-import Head from "next/head"
-import React from "react"
-import MDXPillButton from "@/components/docs/pill-button"
-import MDXDisclaimerText from "@/components/docs/disclaimer-text"
-import styles from '@/styles/Docs.module.css'
+import { GetStaticPaths } from 'next';
+import { ParsedUrlQuery } from "querystring";
+import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
+import Head from "next/head";
+import React from "react";
+import MDXPillButton from "@/components/docs/pill-button";
+import MDXSupportImage from "@/components/docs/support-image";
+import MDXDisclaimerText from "@/components/docs/disclaimer-text";
+import styles from "@/styles/Docs.module.css";
 
 export default function SupportDocsPage({ source }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
@@ -18,7 +19,7 @@ export default function SupportDocsPage({ source }: InferGetStaticPropsType<type
         <title>{source.frontmatter.title as string}</title>
         <meta name="description" content={source.frontmatter.description as string} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/shared-assets/favicon.ico" />
       </Head>
       <div
         className={`${styles["main"]} ${styles["prominent-title"]}`}>
@@ -26,7 +27,8 @@ export default function SupportDocsPage({ source }: InferGetStaticPropsType<type
           {...source}
           components={{
             MDXPillButton,
-            MDXDisclaimerText
+            MDXDisclaimerText,
+            MDXSupportImage
           }}
         />
       </div>

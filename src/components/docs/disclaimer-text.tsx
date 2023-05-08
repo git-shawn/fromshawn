@@ -1,9 +1,9 @@
 import React from "react"
-import gridStyle from '@/styles/Docs.module.css'
+import docStyle from "@/styles/Docs.module.css";
 
 export default function MDXDisclaimerText({ text }: { text: string }) {
     return (
-        <p className={gridStyle["disclaimer-text"]}>
+        <p className={docStyle["disclaimer-text"]}>
             {text}
         </p>
     )

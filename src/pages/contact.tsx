@@ -10,7 +10,7 @@ export default function Contact() {
                 <title>Shawn Davis - Contact Me</title>
                 <meta name="description" content="Just a guy who loves being outside and volunteering. I code sometimes too." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/shared-assets/favicon.ico" />
                 <meta property="og:title" content="Shawn Davis - Contact Me" />
                 <meta property="og:description" content="Just a guy who loves being outside and volunteering. I code sometimes too." />
                 <meta property="og:image" content="/previews/social-box-main.png" />
