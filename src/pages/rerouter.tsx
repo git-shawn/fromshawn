@@ -32,11 +32,11 @@ export default function Rerouter() {
     <>
       <Head>
         <title>Rerouter</title>
-        <meta name="description" content="A super simple Safari Extension that intercepts all Google Maps links redirects them to Apple Maps." />
+        <meta name="description" content="Rerouter is a super simple Safari Extension that intercepts all Google Maps links redirects them to Apple Maps. Automatically." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/shared-assets/favicon.ico" />
+        <link rel="icon" href="/rerouter/favicon.ico" />
         <meta property="og:title" content="Rerouter" />
-        <meta property="og:description" content="A super simple Safari Extension that intercepts all Google Maps links redirects them to Apple Maps." />
+        <meta property="og:description" content="Rerouter is a super simple Safari Extension that intercepts all Google Maps links redirects them to Apple Maps. Automatically." />
         <meta property="og:image" content="/previews/social-box-rerouter.png" />
       </Head>
       <div className={grid["main"]}>

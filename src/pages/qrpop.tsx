@@ -33,11 +33,11 @@ export default function QRPop() {
     <>
       <Head>
         <title>QR Pop</title>
-        <meta name="description" content="A lightning-fast QR code generator built specifically for Apple devices." />
+        <meta name="description" content="QR Pop is an expressive, lightning-fast QR code generator built specifically for Apple devices." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/shared-assets/favicon.ico" />
+        <link rel="icon" href="/qrpop/favicon.ico" />
         <meta property="og:title" content="QR Pop" />
-        <meta property="og:description" content="A lightning-fast QR code generator built specifically for Apple devices." />
+        <meta property="og:description" content="QR Pop is an expressive, lightning-fast QR code generator built specifically for Apple devices." />
         <meta property="og:image" content="/previews/social-box-qr.png" />
       </Head>
       <div className={grid["main"]}>
