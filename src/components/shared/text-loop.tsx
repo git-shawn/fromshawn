@@ -43,7 +43,7 @@ const TextLoop = ({ children }: React.PropsWithChildren) => {
             }
             setIndex(next);
         }, 3 * 1000);
-    }, [index, setIndex]);
+    }, [index, setIndex, count]);
 
     return (
         <>

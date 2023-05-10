@@ -74,7 +74,7 @@ export default function QRPop() {
             viewport={{ once: true, amount: 0.3 }}
             variants={squircleVariants}
             style={{
-              backgroundColor: "#FF7033",
+              backgroundColor: "#FF5E1A",
               justifyContent: "center",
               padding: "2rem"
             }}
@@ -93,7 +93,7 @@ export default function QRPop() {
             viewport={{ once: true, amount: 0.3 }}
             variants={squircleVariants}
             style={{
-              backgroundColor: "#FF7033",
+              backgroundColor: "#FF5E1A",
               justifyContent: "center",
             }}
             className={`${grid["item"]} ${grid["padded"]} ${grid["one"]} ${grid["default-background"]} ${appStyle["image"]} ${appStyle["zoom"]}`}>

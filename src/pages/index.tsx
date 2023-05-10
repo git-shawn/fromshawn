@@ -54,7 +54,7 @@ export default function Home() {
       title: "QR Pop",
       body: "A clean, convenient, and privacy-first QR code generator for macOS, iOS, and watchOS.",
       image: imageQRPop,
-      backgroundColor: "#FF7033",
+      backgroundColor: "#FF5E1A",
       flippedTitle: "QR codes right where you need them (everywhere)",
       flippedBody: "QR Pop was built with both privacy and simplicity in mind. Not only can you design a beautiful, custom QR code but you can do it in nearly every app on your device. QR Pop's system extensions that bring code generation to the Share Sheet, Siri, Shortcuts, Safari, and more.",
       flippedURL: "/qrpop"
@@ -126,8 +126,9 @@ export default function Home() {
             </div>
             <Image
               src={card.image}
+              role="presentation"
               alt=""
-              sizes="25rem"
+              sizes="(max-width: 450px) 20rem"
               className={`${grid["lower-photo"]}`}
             />
           </motion.div>
@@ -148,8 +149,11 @@ export default function Home() {
                 className={`${grid["card-row"]} ${grid["header"]}`}>
                 <h2>{card.flippedTitle}</h2>
                 <div
+                  role="button"
+                  tabIndex={0}
                   className={`${grid["circular-material-button"]} ${grid["small"]} ${grid["black"]} ${grid["actionable"]}`}
-                  onClick={() => { setFlip(false) }}>
+                  onClick={() => { setFlip(false) }}
+                  onKeyDown={() => { setFlip(false) }}>
                   <FaTimes
                     className={`${grid["circular-material-button-icon"]} ${grid["small"]}`} />
                 </div>

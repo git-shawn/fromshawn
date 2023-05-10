@@ -1,5 +1,5 @@
 import DocCard, { DocPreview } from "@/components/docs/doc-preview"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from 'next/router'
 import { InferGetStaticPropsType } from "next"
 import fs from "fs"
@@ -11,13 +11,17 @@ import Head from "next/head";
 export default function Home({ postPreviews }: InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter()
   const { tag } = router.query
+  const pickerRef = useRef<HTMLSelectElement>(null);
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
     if (tag != undefined) {
-      setFilter(tag as string)
+      setFilter(tag as string);
+      if (pickerRef.current) {
+        pickerRef.current.value = tag as string
+      }
     }
-  }, [router])
+  }, [router, tag])
 
   return (
     <>
@@ -33,6 +37,7 @@ export default function Home({ postPreviews }: InferGetStaticPropsType<typeof ge
       <div className={styles["main"]}>
         <div className={styles["doc-filter-bar"]}>
           <select
+            ref={pickerRef}
             onChange={(e) => {
               setFilter(e.target.value);
             }}

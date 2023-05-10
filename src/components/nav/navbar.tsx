@@ -22,15 +22,20 @@ const Navbar = () => {
     return (
         <header>
             <nav className={styles["nav"]}>
-                <Link href={"/"}>
+                <Link
+                    aria-label="Navigate Home"
+                    href={"/"}
+                >
                     <h1 className={styles["nav-logo"]}>Shawn Davis</h1>
                 </Link>
                 {menuOpen ?
                     <HiX
+                        aria-label="Close Menu"
                         className={` ${styles["nav-list-item"]} ${styles["hamburger"]}`}
                         onClick={() => { setMenuOpen(false) }}
                     /> :
                     <HiOutlineMenuAlt2
+                        aria-label="Open Menu"
                         className={` ${styles["nav-list-item"]} ${styles["hamburger"]}`}
                         onClick={() => { setMenuOpen(true) }}
                     />

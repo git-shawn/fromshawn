@@ -22,18 +22,18 @@ export default function FooterBox() {
         }
     }
 
-    return (<motion.div
+    return (
+    <motion.div
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.5 }}>
         <motion.div
             variants={squircleVariants}
-            className={`${grid["row"]}`}>
+            className={grid["row"]}>
             <div className={`${grid["item"]} ${grid["default-background"]}`}>
                 <Image
                     src={imageGradient}
                     alt={""}
-                    priority={true}
                     className={`${grid["cover-photo"]} ${grid["blended"]}`}
                 />
                 <div

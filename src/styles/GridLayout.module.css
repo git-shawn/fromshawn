@@ -185,10 +185,11 @@
 .pill-button {
     display: flex;
     align-items: center;
+    text-align: center;
     background-color: var(--color-foreground);
     color: var(--color-background);
-    height: 50px;
-    padding: 0px 30px;
+    min-height: 50px;
+    padding: 0.5rem 30px;
     border-radius: 30px;
     transition: background-color 0.25s;
     cursor: pointer;
@@ -199,7 +200,7 @@
 }
 
 .pill-button.orange:hover {
-    background-color: #FF7033;
+    background-color: #FF5E1A;
 }
 
 .pill-button.blue:hover {
@@ -311,11 +312,11 @@
 
     .pill-button,
     .circular-material-button {
-        height: 25px;
+        min-height: 25px;
     }
 
     .pill-button {
-        padding: 0 10px;
+        padding: 10px 10px;
     }
 
     .circular-material-button {

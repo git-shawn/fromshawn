@@ -47,6 +47,8 @@ export default function Resume() {
                         <h1>Hi, I'm Shawn</h1>
                         <a
                             href="/resume/shawn-davis-resume.pdf"
+                            aria-label="Download PDF Resume"
+                            title="Download PDF Resume"
                             download
                             className={`${gridStyles["circular-material-button"]} ${gridStyles["black"]}`}>
                             <BsCloudDownload
@@ -92,6 +94,13 @@ export default function Resume() {
                                 <span>JavaScript</span>
                                 <span>WordPress</span>
                             </div>
+                            <a
+                                href="https://www.breathinisbelievin.org/"
+                                className={`${styles.link}`}
+                                data-text="Foundation Website"
+                            >
+                                Foundation Website
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +145,7 @@ export default function Resume() {
                                 St. Louis
                             </h3>
                             Implemented GA4, created engaging web experiences, enhanced email
-                            marketing, and developed social media content calendars.
+                            marketing, and coordinated social media content calendars.
                             <div className={`${styles.skillPills}`}>
                                 <span>HTML</span>
                                 <span>CSS</span>
@@ -267,7 +276,10 @@ export default function Resume() {
                     <h2 className={styles["grid-title"]}>Certifications</h2>
                     <div className={`${styles.certGrid}`}>
                         <div className={`${styles.certItem}`}>
-                            <a href="https://skillshop.credential.net/2d72e39e-9cd3-449f-ad50-bf539b182cbb#gs.rdkc2o">
+                            <a
+                                title="Google Analytics Certification"
+                                href="https://skillshop.credential.net/2d72e39e-9cd3-449f-ad50-bf539b182cbb#gs.rdkc2o"
+                            >
                                 <Image
                                     className={`${styles.roundedImage}`}
                                     alt="Google Analytics Certification"
@@ -276,7 +288,10 @@ export default function Resume() {
                             </a>
                         </div>
                         <div className={`${styles.certItem}`}>
-                            <a href="https://skillshop.exceedlms.com/student/award/qEkwWJxnqxVy9G9b8P7tcSV8">
+                            <a
+                                title="Google Ads - Measurement Certification"
+                                href="https://skillshop.exceedlms.com/student/award/qEkwWJxnqxVy9G9b8P7tcSV8"
+                            >
                                 <Image
                                     className={`${styles.roundedImage}`}
                                     alt="Google Ads - Measurement Certification"
@@ -285,10 +300,13 @@ export default function Resume() {
                             </a>
                         </div>
                         <div className={`${styles.certItem}`}>
-                            <a href={swiftFullCert.src}>
+                            <a
+                                title="100 Days of Swift Completion Certificate"
+                                href={swiftFullCert.src}
+                            >
                                 <Image
                                     className={`${styles.roundedImage}`}
-                                    alt="100 Days of Swift Certification"
+                                    alt="100 Days of Swift Completion Certificate"
                                     src={swiftCert}
                                 />
                             </a>
@@ -298,6 +316,7 @@ export default function Resume() {
             </div>
             <div
                 style={{
+                    padding: "1rem",
                     maxWidth: "900px",
                     margin: "0 auto"
                 }}

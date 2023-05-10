@@ -8,7 +8,11 @@ export default function Lightbox({ children }: React.PropsWithChildren) {
     return (
         <>
             <span
+                tabIndex={0}
+                role="button"
+                aria-label={"Make Image Fullscren"}
                 onClick={() => { setPresenting(true) }}
+                onKeyDown={() => { setPresenting(true) }}
             >
                 {children}
             </span>
@@ -19,7 +23,10 @@ export default function Lightbox({ children }: React.PropsWithChildren) {
                         animate={{ scale: 1, opacity: 1, filter: "blur(0)" }}
                         exit={{ scale: 0, opacity: 0, filter: "blur(2rem)" }}
                         className={styles["lightbox"]}
+                        role="button"
                         onClick={() => { setPresenting(false) }}
+                        onKeyDown={() => { setPresenting(false) }}
+                        aria-label={"End Fullscren"}
                     >
                         {children}
                     </motion.div>

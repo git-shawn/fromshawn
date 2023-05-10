@@ -24,28 +24,28 @@ export default function Contact() {
                     <form
                         className={styles["form"]}
                         method="POST" action={`https://formsubmit.co/${process.env.FORM_KEY}`}>
-                        <div className={styles["form-item"]}>
-                            <label>Name</label>
+                        <label className={styles["form-item"]}>
+                            Name
                             <input
                                 className={styles["form-input"]}
                                 type="text"
                                 name="name" />
-                        </div>
+                        </label>
 
-                        <div className={styles["form-item"]}>
-                            <label>Email</label>
+                        <label className={styles["form-item"]}>
+                            Email
                             <input
                                 className={styles["form-input"]}
                                 type="text"
                                 name="email" />
-                        </div>
+                        </label>
 
-                        <div className={styles["form-item"]}>
-                            <label>Message</label>
+                        <label className={styles["form-item"]}>
+                            Message
                             <textarea
                                 className={`${styles["form-input"]} ${styles["text-area"]}`}
                                 name="message"></textarea>
-                        </div>
+                        </label>
 
                         <button
                             className={styles["form-submit-button"]}
