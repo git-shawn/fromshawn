@@ -114,6 +114,7 @@ export default function Home() {
               backgroundColor: `${card.backgroundColor}`,
               color: 'white'
             }}
+            aria-label="View Details"
             onClick={() => { setFlip(true) }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -151,6 +152,7 @@ export default function Home() {
                 <div
                   role="button"
                   tabIndex={0}
+                  aria-label="Close Details"
                   className={`${grid["circular-material-button"]} ${grid["small"]} ${grid["black"]} ${grid["actionable"]}`}
                   onClick={() => { setFlip(false) }}
                   onKeyDown={() => { setFlip(false) }}>
@@ -164,7 +166,7 @@ export default function Home() {
               <Link
                 href={card.flippedURL}
                 className={`${grid["pill-button"]} ${grid["invert"]}`}>
-                Learn More
+                Explore Details
               </Link>
             </div>
           </div>
