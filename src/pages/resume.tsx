@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "@/styles/Resume.module.css";
 import gridStyles from "@/styles/GridLayout.module.css"
 import { BsHeart, BsCloudDownload } from "react-icons/bs";
+import { motion, Variants } from "framer-motion";
 
 import ga4Cert from "/public/resume/cert-ga.png";
 import gaAdsCert from "/public/resume/cert-ga-ads.png";
@@ -11,6 +13,22 @@ import swiftFullCert from "/public/resume/cert-swift-full.jpg";
 import FooterBox from "@/components/shared/contact-footer";
 
 export default function Resume() {
+
+    const squircleVariants: Variants = {
+        offscreen: {
+            opacity: 0,
+            y: 50,
+        },
+        onscreen: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 1
+            }
+        }
+    }
 
     return (
         <>
@@ -82,6 +100,28 @@ export default function Resume() {
 
                 <div id="work">
                     <h2 className={styles["grid-title"]}>Work Experience</h2>
+
+                    <motion.div
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        variants={squircleVariants}
+                        viewport={{ once: true, amount: 0.3 }}
+                        className={styles["banner"]}
+                    >
+                        <p>Currently seeking new opportunities</p>
+                        <div
+                            style={{
+                                margin: 0
+                            }}
+                            className={gridStyles["button-row"]}
+                        >
+                            <Link
+                                href="/contact"
+                                className={gridStyles["pill-button"]}>
+                                Contact Me
+                            </Link>
+                        </div>
+                    </motion.div>
 
                     {/* BAMSL */}
 

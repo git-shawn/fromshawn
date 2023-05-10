@@ -111,6 +111,17 @@
     font-size: 12px;
 }
 
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    margin: 1rem 0rem;
+}
+
 @media (max-width: 750px) {
     .aboutContainer {
         padding: 1rem;
