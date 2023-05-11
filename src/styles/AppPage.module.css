@@ -25,7 +25,7 @@
 
 @media (hover: none) {
     .image.rise img {
-        transform: scale(2) translateY(3rem);
+        transform: scale(2) translateY(15%);
     }
 
     .image.rise.reverse img {
@@ -33,7 +33,7 @@
     }
 
     .image.zoom img {
-        transform: scale(2) translateX(-20vmin);
+        transform: scale(2) translateX(-30%);
     }
 }
 

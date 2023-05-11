@@ -256,7 +256,7 @@
 
 /* Responsive Grid Breaks */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .main {
         padding: 1rem;
     }

@@ -96,7 +96,7 @@ export default function Rerouter() {
               backgroundColor: "#3A93FF",
               padding: "2rem"
             }}
-            className={`${grid["item"]} ${grid["two"]} ${grid["default-background"]} ${appStyle["image"]} ${appStyle["tilt"]}`}>
+            className={`${grid["item"]} ${grid["one"]} ${grid["default-background"]} ${appStyle["image"]} ${appStyle["tilt"]}`}>
             <Image
               className={grid["clamped"]}
               alt={"Two phones with an arrow pointing from Google Maps on one phone to Apple Maps on the other."}
