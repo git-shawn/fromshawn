@@ -11,6 +11,7 @@ import gaAdsCert from "/public/resume/cert-ga-ads.png";
 import swiftCert from "/public/resume/cert-swift.png";
 import swiftFullCert from "/public/resume/cert-swift-full.jpg";
 import FooterBox from "@/components/shared/contact-footer";
+import Sparkles from "@/components/shared/sparkle";
 
 export default function Resume() {
 
@@ -107,9 +108,7 @@ export default function Resume() {
 
                 {/* Work Experience */}
 
-                <div id="work">
-                    <h2 className={styles["grid-title"]}>Work Experience</h2>
-
+                <Sparkles color="#FFC700">
                     <motion.div
                         initial="offscreen"
                         whileInView="onscreen"
@@ -117,7 +116,7 @@ export default function Resume() {
                         viewport={{ once: true, amount: 0.3 }}
                         className={styles["banner"]}
                     >
-                        <p>Currently seeking new opportunities</p>
+                        <p>Currently pursuing new career opportunities</p>
                         <div
                             style={{
                                 margin: 0
@@ -131,6 +130,10 @@ export default function Resume() {
                             </Link>
                         </div>
                     </motion.div>
+                </Sparkles>
+
+                <div id="work">
+                    <h2 className={styles["grid-title"]}>Work Experience</h2>
 
                     {/* BAMSL */}
 

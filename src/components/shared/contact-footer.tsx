@@ -1,3 +1,7 @@
+// Based on this great tutorial by Josh Comeau
+// https://www.joshwcomeau.com/react/animated-sparkles-in-react/
+// Adapted for TypeScript / Removed `styled-component` dependency.
+
 import Link from "next/link";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
