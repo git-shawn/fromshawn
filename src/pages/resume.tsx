@@ -46,7 +46,7 @@ export default function Resume() {
                 <div id="intro">
                     <div className={styles["download-row"]}>
                         <h1>Hi, I'm Shawn</h1>
-                        <a
+                        {/* <a
                             href="/resume/shawn-davis-resume.pdf"
                             aria-label="Download PDF Resume"
                             title="Download PDF Resume"
@@ -55,7 +55,7 @@ export default function Resume() {
                             <BsCloudDownload
                                 className={gridStyles["circular-material-button-icon"]}
                             />
-                        </a>
+                        </a> */}
                     </div>
                     <p>I'm a passionate digital communicator and freelance software developer.</p>
                     <p>I <BsHeart style={{ verticalAlign: "sub" }} /> volunteering, running, and our national parks.</p>
@@ -108,7 +108,7 @@ export default function Resume() {
 
                 {/* Work Experience */}
 
-                <Sparkles color="#FFC700">
+                {/* <Sparkles color="#FFC700">
                     <motion.div
                         initial="offscreen"
                         whileInView="onscreen"
@@ -130,10 +130,25 @@ export default function Resume() {
                             </Link>
                         </div>
                     </motion.div>
-                </Sparkles>
+                </Sparkles> */}
 
                 <div id="work">
                     <h2 className={styles["grid-title"]}>Work Experience</h2>
+
+                    {/* DUDA */}
+
+                    <div className={`${styles.fourGrid}`}>
+                        <div className={`${styles.fourGridDate}`}>
+                            2023 - Now<br></br>
+                            <span className={`${styles.location}`}>Louisville, CO</span>
+                        </div>
+                        <div className={`${styles.fourGridItem}`}>
+                            <h3>
+                                Content Writer - Duda
+                            </h3>
+                        </div>
+                        <br></br>
+                    </div>
 
                     {/* BAMSL */}
 
