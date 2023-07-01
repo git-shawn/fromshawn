@@ -7,7 +7,6 @@ import { HiOutlineMenuAlt2, HiX } from "react-icons/hi";
 
 const MENU_ITEMS = [
     { text: "Home", href: "/" },
-    { text: "Resume", href: "/resume" },
     { text: "Contact Me", href: "/contact" },
 ];
 

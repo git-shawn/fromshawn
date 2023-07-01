@@ -77,7 +77,7 @@ export default function Home() {
       backgroundColor: "#8E869E",
       flippedTitle: "Breathin' is Believin'",
       flippedBody: "The Cody Dieruf Foundation is giving hope, and financial aid, to those in Montana living with Cystic Fibrosis. As their AmeriCorps VISTA, I created effective marketing collateral that activated dozens of donors and acquired many new clients. I even made a specialty license plate!",
-      flippedURL: "/resume#cdf"
+      flippedURL: "https://breathinisbelievin.org/plate/"
     },
     {
       id: 4,
@@ -87,7 +87,7 @@ export default function Home() {
       backgroundColor: "#660000",
       flippedTitle: "Better Call SAL",
       flippedBody: "The Saluki AdLab is Southern Illinois University's award-winning student-led full-service ad agency. As their creative director,  I helped realize projects for clients across the state of Illinois. My work included web development, app development, social media management, ad buying, and commercial production.",
-      flippedURL: "/resume#sal"
+      flippedURL: "https://www.salukiadlab.com/post/the-daily-egyptian"
     }
   ]
 
@@ -166,7 +166,7 @@ export default function Home() {
               <Link
                 href={card.flippedURL}
                 className={`${grid["pill-button"]} ${grid["invert"]}`}>
-                Explore Details
+                Learn More
               </Link>
             </div>
           </div>
