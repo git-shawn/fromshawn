@@ -38,6 +38,10 @@
   transform: translateX(3rem);
 }
 
+.hero .image img {
+  object-fit: cover;
+}
+
 /* CARDS SECTION */
 
 .cards {
