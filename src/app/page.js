@@ -102,7 +102,7 @@ export default function Home() {
               href="https://www.salukiadlab.com/post/the-daily-egyptian"
               outbound={true}
             >
-              Meet the DE App
+              Meet the DE
             </Button>
           </div>
 

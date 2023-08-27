@@ -120,4 +120,8 @@
   .hero svg {
     font-size: 22pt;
   }
+
+  .card {
+    font-size: 16pt;
+  }
 }
