@@ -1,0 +1,53 @@
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    font-size: 0.75em;
+}
+
+.flexRow a {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    text-align: center;
+    line-height: 2em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.flexRow a:hover {
+    background-color: color-mix(in srgb, var(--primary), transparent 90%);
+}
+
+.flexRow a svg {
+    height: 2em;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: color-mix(in srgb, var(--primary), transparent 90%);
+    transition: transform 0.2s;
+}
+
+.outbound svg {
+    margin-left: 0.25em;
+    transform: rotate(-45deg);
+    vertical-align: -10%;
+    transition: 0.2s;
+}
+
+.outbound:hover svg {
+    transform: rotate(0deg);
+}
+
+.button:hover {
+    background-color: color-mix(in srgb, var(--primary), transparent 80%);
+}
+
+.button:active {
+    transform: scale(0.95);
+}

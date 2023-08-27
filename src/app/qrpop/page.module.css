@@ -1,0 +1,269 @@
+.hero {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 3rem;
+    border-radius: 2rem;
+    background-color: var(--qrpop);
+    color: var(--background);
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 2rem;
+    box-sizing: content-box;
+}
+
+.hero .image {
+    flex: 1;
+    align-self: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.3) translateZ(0);
+    filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.35));
+}
+
+.hero .image img {
+    object-fit: contain;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: center;
+}
+
+.content p {
+    opacity: 0.9;
+}
+
+.hero .content a {
+    color: var(--background) !important;
+    background-color: color-mix(in srgb, var(--background), transparent 80%);
+}
+
+.hero .content a:hover {
+    background-color: color-mix(in srgb, var(--background), transparent 70%);
+}
+
+.privacy .content a {
+    color: #D1D1F4 !important;
+    background-color: color-mix(in srgb, #D1D1F4, transparent 80%);
+}
+
+.privacy .content a:hover {
+    background-color: color-mix(in srgb, #D1D1F4, transparent 70%);
+}
+
+.content .plain a {
+    margin-top: 0.75em;
+    padding: 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+    text-align: left;
+    background-color: transparent !important;
+}
+
+.features {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.featureBlock {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.featureBlock:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+.featureBlock:first-child {
+    margin-top: 4rem;
+}
+
+.featureBlock.reverse {
+    flex-direction: row-reverse;
+}
+
+.featureBlock .info {
+    flex: 1;
+    align-self: center;
+}
+
+.featureBlock .image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    border: 1px solid var(--thick-material);
+}
+
+.privacy {
+    display: flex;
+    flex-direction: column;
+    background-color: #291D4D;
+    color: #D1D1F4;
+    gap: 2rem;
+}
+
+.privacyBlock {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.privacyBlock .image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    border: 1px solid var(--thick-material);
+    z-index: 1;
+}
+
+.roundedBreak {
+    transform: translateY(-5px);
+    background-color: var(--background);
+    height: 6rem;
+    border-radius: 0 0 3rem 3rem;
+}
+
+.roundedBreakFlipped {
+    transform: translateY(5px);
+    background-color: var(--background);
+    height: 6rem;
+    border-radius: 3rem 3rem 0 0;
+}
+
+.appendix {
+    max-width: 800px;
+    margin: 10px auto;
+    padding-bottom: 4rem;
+}
+
+.appendix .disclaimers {
+    font-size: 10pt;
+    padding: 2rem;
+    color: var(--secondary);
+}
+
+.appendix .disclaimers a {
+    font-weight: 600;
+}
+
+.systemContainer {
+    background-color: var(--material);
+    padding: 1.5rem 2rem 2rem 2rem;
+    border-radius: 2rem;
+}
+
+.systemContainer h2 {
+    opacity: 0.8;
+}
+
+.system {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.system svg {
+    flex: 1;
+    color: var(--primary);
+    font-size: 52pt;
+}
+
+.system p {
+    margin: unset;
+    font-size: 10pt;
+    color: var(--secondary);
+}
+
+@media only screen and (max-width: 1200px) {
+    .hero {
+        margin: 4rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .hero {
+        padding: 3rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+    .features,
+    .appendix {
+        margin: 10px 2rem;
+    }
+
+    .privacyBlock {
+        margin: 2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .hero .image {
+        margin-bottom: -50%;
+    }
+
+    .hero {
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .featureBlock,
+    .featureBlock.reverse {
+        flex-direction: column-reverse;
+    }
+
+    .privacyBlock {
+        flex-direction: column-reverse;
+    }
+
+    .system svg {
+        font-size: 48pt;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hero {
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .features,
+    .appendix {
+        margin: 10px 1rem;
+    }
+
+    .system {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .privacyBlock {
+        margin: 1rem;
+    }
+}

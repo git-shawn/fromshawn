@@ -1,0 +1,43 @@
+.post {
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+.content p {
+    margin-bottom: 1em;
+}
+
+.date {
+    color: var(--secondary);
+    font-size: 12pt;
+    margin: 0.3rem 0 1rem 0;
+}
+
+.tag {
+    display: inline;
+    font-size: 10pt;
+    padding: 0.3rem 0.6rem;
+    border-radius: 1rem;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.breadcrumb {
+    color: var(--secondary);
+    font-size: 12pt;
+}
+
+.breadcrumb a {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 800px) {
+    .post {
+        margin: 2rem;
+    }
+}

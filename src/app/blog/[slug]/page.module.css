@@ -1,0 +1,50 @@
+.post {
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
+.content p {
+    margin-bottom: 1em;
+}
+
+.date {
+    color: var(--secondary);
+    font-size: 12pt;
+    margin: 0.3rem 0 1rem 0;
+}
+
+.image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    aspect-ratio: 5 / 3;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem;
+    margin: 1rem 0;
+}
+
+.image img {
+    object-fit: cover;
+}
+
+.breadcrumb {
+    color: var(--secondary);
+    font-size: 12pt;
+}
+
+.breadcrumb a {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 800px) {
+    .post {
+        margin: 2rem;
+    }
+}
