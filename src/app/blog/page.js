@@ -11,7 +11,8 @@ export const metadata = {
 }
 
 export default function Blog() {
-    const posts = getAllPosts(["title", "date", "blurb", "image", "alt", "slug"], "blog");
+    //const posts = getAllPosts(["title", "date", "blurb", "image", "alt", "slug"], "blog");
+    const posts = []
 
     return (
         <div className={styles.blog}>
