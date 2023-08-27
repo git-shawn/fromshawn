@@ -110,7 +110,7 @@ export default function QRPop() {
                     <div className={styles.content}>
                         <div>
                             <h2>Built for Privacy</h2>
-                            <p>QR Pop uses the best method possible to protect your data—by not collecting it at all. The app does not track you in any way and never communicates with a server. Your archived codes are securely stored in your private iCloud account. I couldn’t see them if I wanted to.</p>
+                            <p>QR Pop uses the best method possible to protect your data—not collecting it at all. The app does not track you in any way and never communicates with a server. Your archived codes are securely stored in your private iCloud account. I couldn’t see them if I wanted to.</p>
                         </div>
 
                         <Button href="/qrpop/privacy-policy" outbound>Privacy Policy</Button>

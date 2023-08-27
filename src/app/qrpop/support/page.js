@@ -21,7 +21,7 @@ export default function Support() {
 
             <header>
                 <h1>QR Pop Support</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Have a question that isn't covered here? Email me or use the button below.</p>
                 <Button
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdDXEs4DJ2iKHQrhe7zj2LwP8Kk4ABnN7vZD4HORTJI92m9Vg/viewform?usp=sf_link"
                     outbound
