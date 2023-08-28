@@ -111,7 +111,7 @@
   }
 
   .card .image {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -123,6 +123,10 @@
 
   .hero svg {
     font-size: 22pt;
+  }
+
+  .cards {
+    padding: 2rem 1rem;
   }
 
   .card {

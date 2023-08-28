@@ -4,16 +4,23 @@
 
 import styles from './navbar.module.css';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion';
-import { AiOutlineArrowRight, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Burger } from './burger';
 
 export default function Navbar() {
     const [isOpen, setOpen] = useState(false);
+    const path = usePathname();
+    
     const toggleBurger = () => {
         setOpen(!isOpen);
     }
+
+    useEffect(() => {
+        setOpen(false);
+    }, [path]);
 
     return (
         <nav className={styles.nav}>
