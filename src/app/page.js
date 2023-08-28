@@ -27,9 +27,10 @@ export default function Home() {
           <div className={styles.image}>
             <Image
               src="/home/profile.webp"
-              priority
+              priority={true}
               fill={true}
               alt="A group photograph featuring me, Shawn, standing in the front center helping hold a blue sign labeled 'AmeriCorps Montana'. Everybody in the picture is wearing business casual and the photograph is being taken in front of the Montana state capital building. Written on top of the photograph, in white ink, is the words 'That's Me!' with a hand-drawn arrow pointing to me."
+              sizes="(max-width: 600px) 50vw, 100vw"
             />
           </div>
         </div>
@@ -56,8 +57,11 @@ export default function Home() {
           <div className={styles.image}>
             <Image
               src="/home/qrpop.webp"
-              fill
+              fill={true}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8n2f8HwAGtQKhPIj2xQAAAABJRU5ErkJggg=="
               alt="A rendering of a phone displaying of the QR Pop app."
+              sizes="(max-width: 600px) 50vw, 100vw"
             />
           </div>
         </div>
@@ -82,8 +86,11 @@ export default function Home() {
           <div className={styles.image}>
             <Image
               src="/home/rerouter.webp"
-              fill
+              fill={true}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO0mvz/PwAFqALN/ZPxbAAAAABJRU5ErkJggg=="
               alt="A rendering of an iPad displaying the Rerouter Safari Extension pop-up while visiting Google Maps."
+              sizes="(max-width: 600px) 50vw, 100vw"
             />
           </div>
         </div>
@@ -110,7 +117,10 @@ export default function Home() {
             <Image
               src="/home/dailyegyptian.webp"
               alt="A rendering of a phone displaying of the Daily Egyptian app."
-              fill
+              fill={true}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mMMFxb6DwACwgF9iyFaGgAAAABJRU5ErkJggg=="
+              sizes="(max-width: 600px) 50vw, 100vw"
             />
           </div>
         </div>

@@ -46,7 +46,9 @@ export default function Rerouter() {
                     <Image
                         src="/rerouter/header.webp"
                         fill={true}
+                        priority={true}
                         alt="A rendering of two iPhones floating, layered above each other, running QR Pop. The top phone is showing QR Pop's generator with a National Park Service themed code being built. The lower phone shows the app's main menu."
+                        sizes="(max-width: 600px) 50vw, 100vw"
                     />
                 </div>
             </header>
@@ -65,7 +67,10 @@ export default function Rerouter() {
                         <Image
                             src="/rerouter/feature1.webp"
                             fill={true}
+                            placeholder="blur"
+                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO0mvz/PwAFqALN/ZPxbAAAAABJRU5ErkJggg=="
                             alt="A rendering of an iPad displaying QR Pop's generator page. The image is zoomed into the design portion of the editor."
+                            sizes="(max-width: 600px) 50vw, 100vw"
                         />
                     </div>
                 </div>
@@ -80,7 +85,10 @@ export default function Rerouter() {
                         <Image
                             src="/rerouter/feature2.webp"
                             fill={true}
+                            placeholder="blur"
+                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO0mvz/PwAFqALN/ZPxbAAAAABJRU5ErkJggg=="
                             alt="A screenshot of QR Pop for the Mac overlayed by a rendering of an iPhone displaying QR Pop. Both instances of QR Pop are presenting the Archive page with the same codes present on both to demonstrate the application's ability to sync data via iCloud."
+                            sizes="(max-width: 600px) 50vw, 100vw"
                         />
                     </div>
                 </div>
@@ -105,7 +113,10 @@ export default function Rerouter() {
                         <Image
                             src="/illustrations/privacy.webp"
                             fill={true}
+                            placeholder="blur"
+                            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOcO+nZfwAG/wMWtvSwpAAAAABJRU5ErkJggg=="
                             alt="A man looking through binoculars sitting in a field of large grass. There's a bird perched on top of his head."
+                            sizes="(max-width: 600px) 50vw, 100vw"
                         />
                     </div>
                 </div>
