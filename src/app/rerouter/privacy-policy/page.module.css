@@ -17,6 +17,14 @@
     color: var(--secondary);
 }
 
+.policy .content p {
+    margin-bottom: 1em;
+}
+
+.policy .content h2 {
+    font-size: 1.3em;
+}
+
 .breadcrumb {
     color: var(--secondary);
     font-size: 12pt;

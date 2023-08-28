@@ -20,21 +20,32 @@ export default function PrivacyPolicy() {
             </div>
             <h1>Rerouter Privacy Policy</h1>
             <p className={styles.date}>Last Updated August 27, 2023</p>
-            <p>
-                Rerouter ("the app") performs all processing locally, on your device. Any data collected or created by the app is never shared with the developer or any third parties.
-                <br /><br />
-                If you have enabled "Share With App Developers" in the "Analytics & Improvements" section of your device's settings then anonymous data may be collected by Apple, Inc. ("Apple") and shared with me. You're welcome to disable this at any time. Please review Apple's <Link href="https://www.apple.com/legal/privacy/data/en/app-analytics/" rel="nofollow">App Analytics Privacy Policy</Link> for more information.
-                <br /><br />
-                Additionally, I have included links on this app for your use and reference, including the "Submit Feedback" feature. I am not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from my own.
-                <br /><br />
-                Any data you willfully and knowingly share, such as submitted data via the aforementioned feedback form or direct email correspondence with the developer, may be retained.
-                <br /><br />
-                This policy is effective as of the date posted above and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
-                <br /><br />
-                I reserve the right to update or change this Privacy Policy at any time. You should check this Privacy Policy periodically. If any material changes are made a prominent notice will be temporarily placed on this app.
-                <br /><br />
-                For any questions, comments, or concerns regarding this policy, please send me an email at <a href="mailto:contact@fromshawn.dev" rel="nofollow">contact@fromshawn.dev</a>.
-            </p>
+
+            <div className={styles.content}>
+                <p>Rerouter does not embed any third-party tracking or logging technologies nor does it retain or transmit any data.</p>
+
+                <h2>Analytics</h2>
+
+                <p>Rerouter does not perform any first-party data collection, including the collection of analytic data. If you previously agreed to share analytic data with developers then some anonymized data may be collected by Apple, Inc (&quot;Apple&quot;) and shared with me. Please refer to Apple's <a href="https://www.apple.com/legal/privacy/data/en/app-analytics/" rel="nofollow">App Analytics Privacy Policy</a> for more information.</p>
+
+                <h2>External Links</h2>
+
+                <p>For your use and reference, various third-party links may have been embedded into this application. I am not responsible for the privacy policies of these external services. Their privacy policies may differ from my own.</p>
+
+                <h2>Direct Communications</h2>
+
+                <p>If you choose to communicate with me directly, such as via email, then any information you share may be retained.</p>
+
+                <h2>Future Changes</h2>
+
+                <p>I reserve the right to review and update this privacy policy in the future as needed. You are encouraged to occasionally revisit this page to stay aware of modifications to this agreement.</p>
+
+                <p>Rest assured, this document will never allow for the collection of any data for, or concerning, advertising. </p>
+
+                <h2>Contact</h2>
+
+                <p>For any questions, feel free to contact me via email at <a href="mailto:contact@fromshawn.dev" rel="nofollow">contact@fromshawn.dev</a>. I look forward to hearing from you.</p>
+            </div>
         </div>
     )
 }
