@@ -8,11 +8,21 @@ import { IoPhonePortraitOutline, IoTabletPortraitOutline, IoLaptopOutline } from
 
 export const metadata = {
     title: "Rerouter",
-    description: "Rerouter is an unobtrusive Safari Extension that automatically opens Google Maps Links in Apple Maps from any website.",
+    description: "Rerouter is an unobtrusive Safari Extension that automatically opens Google Maps links in Apple Maps from any website.",
     itunes: {
         appId: "1589151155",
     },
-
+    openGraph: {
+        title: "Rerouter",
+        description: "A Safari Extension that automatically opens Google Maps links in Apple Maps.",
+        url: "https://www.fromshawn.dev/rerouter",
+        siteName: "Shawn Davis",
+        locale: "en_US",
+        type: "website",
+    },
+    alternates: {
+        canonical: "/rerouter",
+    },
 }
 
 export default function Rerouter() {

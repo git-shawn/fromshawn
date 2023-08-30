@@ -12,6 +12,17 @@ export const metadata = {
     itunes: {
         appId: "1587360435",
     },
+    openGraph: {
+        title: "QR Pop",
+        description: "A privacy-focused QR code generator designed exclusively for Apple devices.",
+        url: "https://www.fromshawn.dev/qrpop",
+        siteName: "Shawn Davis",
+        locale: "en_US",
+        type: "website",
+    },
+    alternates: {
+        canonical: "/qrpop",
+    },
 }
 
 export default function QRPop() {

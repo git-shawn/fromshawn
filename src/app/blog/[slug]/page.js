@@ -6,6 +6,24 @@ import { getPostBySlug } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
 import Image from 'next/image';
 
+export async function generateMetadata({ params, searchParams }, parent) {
+    const post = getPostBySlug(params.slug, ["title", "blurb", "date"], "blog");
+    return {
+        title: `${post.title} | Blog`,
+        description: post.blurb,
+        openGraph: {
+            title: post.title,
+            description: post.description,
+            type: "article",
+            publishedTime: post.date.toISOString(),
+            authors: ['Shawn'],
+        },
+        alternates: {
+            canonical: `/blog/${params.slug}`,
+        },
+    }
+}
+
 export default async function BlogPost({ params }) {
     const post = getPostBySlug(params.slug, ["title", "date", "image", "alt", "content"], "blog");
 

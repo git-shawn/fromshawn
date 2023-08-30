@@ -8,6 +8,17 @@ import Button from '@/components/buttons/button'
 export const metadata = {
   title: "Shawn Davis",
   description: "I'm the indie app developer behind Rerouter, QR Pop, and others. I write mainly for Apple platforms with a focus on privacy.",
+  openGraph: {
+    title: "Shawn Davis",
+    description: "An indie developer who loves volunteering and running.",
+    url: "https://www.fromshawn.dev",
+    siteName: "Shawn Davis",
+    locale: "en_US",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/",
+  },
 }
 
 export default function Home() {

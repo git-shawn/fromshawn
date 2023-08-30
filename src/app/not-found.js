@@ -2,6 +2,13 @@
 
 import Button from '@/components/buttons/button'
 
+export const metadata = {
+    robots: {
+        index: false,
+        follow: true,
+    },
+}
+
 export default function NotFound() {
     return (
         <div

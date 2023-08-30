@@ -7,7 +7,18 @@ import { getAllPosts } from '@/lib/api';
 
 export const metadata = {
     title: "Blog | Shawn Davis",
-    description: "I'm writing about swift and web development, volunteerism, copywriting, and much more.",
+    description: "I write about swift and web development, among other things.",
+    openGraph: {
+        title: "Shawn's Blog",
+        description: "I write about swift and web development, among other things.",
+        url: "https://www.fromshawn.dev/blog",
+        siteName: "Shawn Davis",
+        locale: "en_US",
+        type: "website",
+    },
+    alternates: {
+        canonical: "/blog",
+    },
 }
 
 export default function Blog() {
