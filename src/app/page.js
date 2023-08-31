@@ -40,6 +40,7 @@ export default function Home() {
               src="/home/profile.webp"
               priority={true}
               fill={true}
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOsLEj8DwAE/wJLQC41TwAAAABJRU5ErkJggg=="
               alt="A group photograph featuring me, Shawn, standing in the front center helping hold a blue sign labeled 'AmeriCorps Montana'. Everybody in the picture is wearing business casual and the photograph is being taken in front of the Montana state capital building. Written on top of the photograph, in white ink, is the words 'That's Me!' with a hand-drawn arrow pointing to me."
               sizes="(max-width: 600px) 50vw, 100vw"
             />

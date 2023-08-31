@@ -43,7 +43,7 @@ a {
 @media (prefers-color-scheme: dark) {
   :root {
     --primary: #FFFFFC;
-    --background: #030616;
+    --background: #080809;
     --secondary: #B2B9C4;
     --material: #1D1D1F;
     --thick-material: rgba(255, 255, 255, .2);
