@@ -105,8 +105,8 @@ export default function QRPop() {
 
                 <div className={`${styles.featureBlock} ${styles.reverse}`}>
                     <div className={styles.info}>
-                        <h2>Fully Integrated</h2>
-                        <p>Turn websites into QR codes in an instant with the Safari Extension, or everywhere else via the Share Sheet. Hands tied? Create codes with your voice via Siri or let your imagination run wild with robust Shortcuts support.</p>
+                        <h2>Everywhere You Need It</h2>
+                        <p>Turn websites into QR codes instantly with the QR code generator for Safari. In most other situations, you can use the Share button or even Siri and Shortcuts to create the perfect codes.</p>
                     </div>
 
                     <div className={styles.image}>

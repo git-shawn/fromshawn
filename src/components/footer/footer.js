@@ -11,7 +11,7 @@ export default function Footer() {
             <p>
                 © 2023 Shawn Davis. Made in Denver, CO
                 <br />
-                Browse this site's source code on <Link href="https://github.com/git-shawn/fromshawndev" rel="nofollow">GitHub</Link>
+                Browse this site's source code on <Link href="https://github.com/git-shawn/fromshawndev" title="GitHub" rel="nofollow">GitHub</Link>
                 <br />
                 Hosted on <Link href="https://vercel.com/" rel="nofollow">Vercel</Link> | <Link href="/privacy">Privacy Policy</Link>
             </p>
