@@ -7,6 +7,10 @@
     margin-bottom: 1em;
 }
 
+.content a {
+    font-weight: bold;
+}
+
 .date {
     color: var(--secondary);
     font-size: 12pt;

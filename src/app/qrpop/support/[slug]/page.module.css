@@ -13,6 +13,10 @@
     margin: 0.3rem 0 1rem 0;
 }
 
+.content a {
+    font-weight: bold;
+}
+
 .tag {
     display: inline;
     font-size: 10pt;
