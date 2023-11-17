@@ -4,6 +4,7 @@ import styles from './footer.module.css';
 import Link from 'next/link';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import SocialButtons from '../buttons/social';
+import Button from '../buttons/button';
 
 export default function Footer() {
     return (
@@ -11,9 +12,9 @@ export default function Footer() {
             <p>
                 © 2023 Shawn Davis. Made in Denver, CO
                 <br />
-                Browse this site's source code on <Link href="https://github.com/git-shawn/fromshawndev" title="GitHub" rel="nofollow">GitHub</Link>
+                Browse this site's source code on <Button href="https://github.com/git-shawn/fromshawndev" outbound plain>GitHub</Button>
                 <br />
-                Hosted on <Link href="https://vercel.com/" rel="nofollow">Vercel</Link> | <Link href="/privacy">Privacy Policy</Link>
+                Hosted on <Button href="https://vercel.com/" outbound plain>Vercel</Button> | <Link href="/privacy">Privacy Policy</Link>
             </p>
 
             <div className={styles.social}>

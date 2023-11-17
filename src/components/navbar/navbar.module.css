@@ -35,18 +35,25 @@
     padding: 0 0.3rem;
 }
 
-.nav ul li a {
+.nav ul li button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: inline;
+}
+
+.nav ul li a, .nav ul li button {
     display: inline-block;
     font-size: 14pt;
     padding: 0.3rem 0.6rem;
     border-radius: 0.3rem;
 }
 
-.nav ul li a:not(.outbound a):hover {
+.nav ul li a:not(.outbound a):hover, .nav ul li button:hover {
     background-color: color-mix(in srgb, var(--secondary), transparent 90%);
 }
 
-.nav ul li a:not(.outbound a):active {
+.nav ul li a:not(.outbound a):active, .nav ul li button:active {
     transform: scale(0.95);
     background-color: color-mix(in srgb, var(--secondary), transparent 80%);
 }
@@ -130,4 +137,50 @@
         font-size: 22pt;
         background: transparent;
     }
+}
+
+.dropMenu {
+    display: flex;
+    overflow-y: scroll;
+    gap: 1rem;
+    background-color: color-mix(in srgb, var(--material), transparent 20%);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--thick-material);
+    width: 100%;
+    padding: 0.75rem 3rem;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all .3s ease-out;
+    z-index: 99998;
+}
+
+.dropMenu a {
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 14pt;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+}
+
+.dropMenu a:hover {
+    background-color: color-mix(in srgb, var(--secondary), transparent 90%);
+}
+
+.dropMenu a:hover svg {
+    transform: rotate(0deg);
+}
+
+.dropmenu a:active {
+    transform: scale(0.95);
+    background-color: color-mix(in srgb, var(--secondary), transparent 80%);
+}
+
+.dropMenu.visible {
+    max-height: 500px;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }

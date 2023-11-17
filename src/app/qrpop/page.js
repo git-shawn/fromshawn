@@ -135,7 +135,7 @@ export default function QRPop() {
                             <p>QR Pop uses the best method possible to protect your data—not collecting it at all. The app does not track you in any way and never communicates with a server. Your archived codes are securely stored in your private iCloud account. I couldn’t see them if I wanted to.</p>
                         </div>
 
-                        <Button href="/qrpop/privacy-policy" outbound>Privacy Policy</Button>
+                        <Button href="/qrpop/privacy-policy">Privacy Policy</Button>
                     </div>
                     <div className={styles.image}>
                         <Image
@@ -192,9 +192,9 @@ export default function QRPop() {
 
                 <div className={styles.disclaimers}>
                     <p>
-                        "QR Code" is a registered trademark of <Link href="https://www.denso-wave.com/en/system/qr/fundamental/qrcode/qrc/index.html" rel="nofollow">DENSO WAVE</Link>.
+                        "QR Code" is a registered trademark of <Button href="https://www.denso-wave.com/en/system/qr/fundamental/qrcode/qrc/index.html" outbound plain>DENSO WAVE</Button>.
                         <br /><br />
-                        QR Pop is an open-source project available under the <Link href="https://github.com/git-shawn/QR-Pop/blob/main/LICENSE" rel="nofollow">MIT license</Link>. No purchase is necessary to use. This software is provided via Apple's App Store "as-is." Use is goverened by Apple's <Link href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="nofollow">Standard End User License Agreement</Link>. Any and all published information is subject to change.
+                        QR Pop is an open-source project available under the <Link href="/qrpop/support/license">MIT license</Link>. No purchase is necessary to use. This software is provided via Apple's App Store "as-is." Use is goverened by Apple's <Button href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" outbound plain>Standard End User License Agreement</Button>. Any and all published information is subject to change.
                     </p>
                 </div>
             </section>

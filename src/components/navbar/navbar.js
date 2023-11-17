@@ -9,20 +9,23 @@ import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Burger } from './burger';
+import useDropdownMenu from 'react-accessible-dropdown-menu-hook';
 
 export default function Navbar() {
-    const [isOpen, setOpen] = useState(false);
+    const [isBurgerOpen, setBurgerOpen] = useState(false);
+    const { buttonProps, itemProps, isOpen } = useDropdownMenu(3);
     const path = usePathname();
     
     const toggleBurger = () => {
-        setOpen(!isOpen);
+        setBurgerOpen(!isBurgerOpen);
     }
 
     useEffect(() => {
-        setOpen(false);
+        setBurgerOpen(false);
     }, [path]);
 
     return (
+        <>
         <nav className={styles.nav}>
             <div className={styles.title}>
                 <Link href="/">
@@ -30,14 +33,14 @@ export default function Navbar() {
                 </Link>
                 <motion.div
                     initial={false}
-                    animate={isOpen ? "open" : "closed"}
+                    animate={isBurgerOpen ? "open" : "closed"}
                 >
                     <Burger toggle={() => toggleBurger()} />
                 </motion.div>
             </div>
 
             <ul
-                className={isOpen ? styles.open : ""}
+                className={isBurgerOpen ? styles.open : ""}
             >
                 <li>
                     <Link href="/">
@@ -45,9 +48,9 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/#apps" rel="nofollow">
+                    <button {...buttonProps} type='button'>
                         APPS
-                    </Link>
+                    </button>
                 </li>
                 <li>
                     <Link href="/blog">
@@ -61,5 +64,11 @@ export default function Navbar() {
                 </li>
             </ul>
         </nav>
+        <div className={`${styles.dropMenu} ${isOpen ? styles.visible : ""}`} role='menu'>
+            <Link {...itemProps[0]} href="/qrpop">QR Pop</Link>
+            <Link {...itemProps[1]} href="/rerouter">Rerouter</Link>
+            <Link {...itemProps[2]} href="https://www.salukiadlab.com/post/the-daily-egyptian" rel="nofollow" className={styles.outbound}>Daily Egyptian <AiOutlineArrowRight /></Link>
+        </div>
+        </>
     )
 }

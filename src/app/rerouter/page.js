@@ -117,7 +117,7 @@ export default function Rerouter() {
                             <p>Rerouter is an app on a mission—to get you where you need to go as quickly as possible. That means there’s just no time left over to spy on your browsing habits. The URLs you visit aren’t recorded, your usage isn’t tracked, and all processing happens locally.</p>
                         </div>
 
-                        <Button href="/rerouter/privacy-policy" outbound>Privacy Policy</Button>
+                        <Button href="/rerouter/privacy-policy">Privacy Policy</Button>
                     </div>
                     <div className={styles.image}>
                         <Image
@@ -168,7 +168,7 @@ export default function Rerouter() {
                     <p>
                         This application is not affiliated with Google or Google Maps.
                         <br /><br />
-                        Rerouter is an open-source project available under the <Link href="https://github.com/git-shawn/Rerouter/blob/main/LICENSE" rel="nofollow">GPL 3.0 license</Link>. No purchase is necessary to use. This software is provided via Apple's App Store "as-is." Use is goverened by Apple's <Link href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="nofollow">Standard End User License Agreement</Link>. Any and all published information is subject to change.
+                        Rerouter is an open-source project available under the <Link href="/rerouter/support/license" rel="nofollow">MIT license</Link>. No purchase is necessary to use. This software is provided via Apple's App Store "as-is." Use is goverened by Apple's <Button href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" outbound plain>Standard End User License Agreement</Button>. Any and all published information is subject to change.
                     </p>
                 </div>
             </section>
