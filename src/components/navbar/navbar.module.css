@@ -36,6 +36,7 @@
 }
 
 .nav ul li button {
+    color: var(--primary);
     border: none;
     background: transparent;
     cursor: pointer;
@@ -142,6 +143,7 @@
 .dropMenu {
     display: flex;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     gap: 1rem;
     background-color: color-mix(in srgb, var(--material), transparent 20%);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
