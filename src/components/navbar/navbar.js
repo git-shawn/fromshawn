@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Burger } from './burger';
+import Button from '../buttons/button';
 import useDropdownMenu from 'react-accessible-dropdown-menu-hook';
 
 export default function Navbar() {
@@ -53,8 +54,8 @@ export default function Navbar() {
                     </button>
                 </li>
                 <li>
-                    <Link href="/blog">
-                        BLOG
+                    <Link href="https://medium.com/@shwndvs">
+                        MEDIUM
                     </Link>
                 </li>
                 <li className={styles.outbound}>

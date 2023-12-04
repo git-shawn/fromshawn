@@ -59,6 +59,10 @@
     background-color: color-mix(in srgb, var(--secondary), transparent 80%);
 }
 
+.outbound {
+    margin-left: 0.3rem;
+}
+
 .outbound a {
     color: var(--material);
     background-color: var(--primary);
@@ -158,6 +162,11 @@
     transform: translateY(-100%);
     transition: all .3s ease-out;
     z-index: 99998;
+    scrollbar-width: none;
+}
+
+.dropMenu::-webkit-scrollbar { 
+    display: none;
 }
 
 .dropMenu a {
@@ -166,6 +175,10 @@
     font-size: 14pt;
     padding: 0.3rem 0.6rem;
     border-radius: 0.3rem;
+}
+
+.dropMenu a:last-of-type {
+    margin-right: 6rem;
 }
 
 .dropMenu a:hover {
