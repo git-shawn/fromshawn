@@ -50,7 +50,7 @@ export default function Navbar() {
                 <DropDown 
                 label="APPS"
                 useStyles={false}
-                activeDropdownClassName={isBurgerOpen ? styles.dropMenu : styles.hidden}
+                activeDropdownClassName={`${styles.dropMenu} ${isBurgerOpen ? "" : styles.hidden}`}
                 >
                         <ul>
                             <li>
