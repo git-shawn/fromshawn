@@ -9,12 +9,10 @@ import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Burger } from './burger';
-import Button from '../buttons/button';
-import useDropdownMenu from 'react-accessible-dropdown-menu-hook';
+import DropDown from 'react-a11y-dropdown'
 
 export default function Navbar() {
     const [isBurgerOpen, setBurgerOpen] = useState(false);
-    const { buttonProps, itemProps, isOpen } = useDropdownMenu(3);
     const path = usePathname();
     
     const toggleBurger = () => {
@@ -49,9 +47,23 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <button {...buttonProps} type='button'>
-                        APPS
-                    </button>
+                <DropDown 
+                label="APPS"
+                useStyles={false}
+                activeDropdownClassName={styles.dropMenu}
+                >
+                        <ul>
+                            <li>
+                                <Link href="/qrpop">QR Pop</Link>
+                            </li>
+                            <li>
+                                <Link href="/rerouter">Rerouter</Link>
+                            </li>
+                            <li>
+                                <Link href="https://www.salukiadlab.com/post/the-daily-egyptian" className={styles.outbound}>Daily Egyptian <AiOutlineArrowRight /></Link>
+                            </li>
+                        </ul>
+                    </DropDown>
                 </li>
                 <li>
                     <Link href="https://medium.com/@shwndvs">
@@ -65,11 +77,6 @@ export default function Navbar() {
                 </li>
             </ul>
         </nav>
-        <div className={`${styles.dropMenu} ${isOpen ? styles.visible : ""}`} role='menu'>
-            <Link {...itemProps[0]} href="/qrpop">QR Pop</Link>
-            <Link {...itemProps[1]} href="/rerouter">Rerouter</Link>
-            <Link {...itemProps[2]} href="https://www.salukiadlab.com/post/the-daily-egyptian" rel="nofollow" className={styles.outbound}>Daily Egyptian <AiOutlineArrowRight /></Link>
-        </div>
         </>
     )
 }

@@ -132,4 +132,15 @@
   .card {
     font-size: 16pt;
   }
+
+  .hero .image {
+    transform: none!important;
+    border-radius: 2em;
+    aspect-ratio: 1;
+  }
+
+  .hero .content {
+    text-align: center;
+    align-items: center;
+  }
 }

@@ -4,6 +4,7 @@ import Navbar from '@/components/navbar/navbar'
 import './globals.css'
 import { Familjen_Grotesk } from 'next/font/google'
 import Footer from '@/components/footer/footer'
+import Strip from '@/components/strip/strip'
 
 const font = Familjen_Grotesk({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={font.className}>
+        <Strip />
         <Navbar />
         <main id="skip-to-content">
           {children}

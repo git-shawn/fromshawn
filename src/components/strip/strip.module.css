@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #3B338B;
+    color: white;
+}
+
+.container p {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.detail {
+    font-weight: 400!important;
+    font-size: 0.8rem!important;
+    opacity: 0.8;
+}
+
+.outbound {
+    color: white;
+    display: inline-block;
+    font-size: 14pt;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+}
+
+.outbound:hover {
+    background-color: white;
+    color: #3B338B;
+}
+
+.outbound:active {
+    transform: scale(0.95);
+    background-color: white;
+    color: #3B338B;
+}
+
+.outbound {
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 100%;
+    margin: auto 0;
+    color: var(--material);
+    background-color: #231e52;
+}
+
+.outbound svg {
+    vertical-align: -10%;
+    transform: rotate(-45deg);
+    transition: 0.2s;
+}
+
+.outbound:active {
+    transform: scale(0.95);
+}
+
+.outbound:hover svg {
+    transform: rotate(0deg);
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
