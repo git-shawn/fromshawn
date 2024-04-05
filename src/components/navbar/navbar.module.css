@@ -158,6 +158,10 @@
         font-size: 22pt;
         background: transparent;
     }
+
+    .hidden {
+        visibility: hidden!important;
+    }
 }
 
 .dropMenu {
@@ -206,8 +210,4 @@
 .dropmenu a:active {
     transform: scale(0.95);
     background-color: color-mix(in srgb, var(--secondary), transparent 80%);
-}
-
-.hidden {
-    visibility: hidden!important;
 }
