@@ -1,7 +1,7 @@
 .container {
     display: flex;
     gap: 1rem;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem 2rem;
     background-color: #3B338B;
     color: white;
@@ -22,9 +22,9 @@
 .outbound {
     color: white;
     display: inline-block;
-    font-size: 14pt;
+    font-size: 1.1rem;
     padding: 0.3rem 0.6rem;
-    border-radius: 0.3rem;
+    border-radius: 0.4rem;
 }
 
 .outbound:hover {
