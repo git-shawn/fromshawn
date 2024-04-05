@@ -69,7 +69,7 @@
 }
 
 .outbound svg {
-    vertical-align: -10%;
+    vertical-align: -15%;
     transform: rotate(-45deg);
     transition: 0.2s;
 }

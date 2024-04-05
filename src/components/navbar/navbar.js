@@ -71,8 +71,8 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li className={styles.outbound}>
-                    <a href="mailto:contact@fromshawn.dev" rel="nofollow">
-                        EMAIL ME <AiOutlineArrowRight />
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsPzETJyaFbIo2QpBG9yR_C3G007tdvY-c9R6qEQSNuULOew/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer nofollow">
+                        CONTACT <AiOutlineArrowRight />
                     </a>
                 </li>
             </ul>
