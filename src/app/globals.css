@@ -28,6 +28,7 @@ h5,
 h6,
 p {
   margin: 0;
+  margin-bottom: 0.2em;
   padding: 0;
 }
 

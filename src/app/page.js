@@ -29,7 +29,7 @@ export default function Home() {
           <div className={styles.content}>
             <div>
               <h1>Hi, I'm Shawn</h1>
-              <p>I'm an indie app developer that's really into running, volunteering, being outdoors, and meeting new people.</p>
+              <p>I'm an indie app developer who's really into running, volunteering, being outside, and meeting new people.</p>
             </div>
 
             <SocialButtons />
