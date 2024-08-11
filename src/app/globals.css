@@ -6,8 +6,8 @@
   --thick-material: rgba(0, 0, 0, .2);
   --background-contrast: linear-gradient(rgb(255 255 255/50%) 0 0);
 
-  --qrpop: #FF6E33;
-  --rerouter: #3A93FF;
+  --qrpop: #FF4F00;
+  --rerouter: #59aaf3;
 }
 
 html {
