@@ -1,6 +1,6 @@
-# fromshawndev
+# fromshawn
 
-`fromshawndev` is my personal portfolio website built with Next.JS for use on [Vercel](https://vercel.com/dashboard). Inside you'll primarily find information regarding my apps.
+`fromshawn` is my personal portfolio website built with Next.JS for use on [Vercel](https://vercel.com/dashboard). Inside you'll primarily find information regarding my apps.
 
 Feel free to poke around and steal any code that you like.
 
